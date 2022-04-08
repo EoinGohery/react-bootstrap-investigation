@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 
 export const UserListPage = () => {
 
-    const { users, error, isLoading, isError } = useQuery("users", getAllUsers);
+    const { data:users, error, isLoading, isError } = useQuery("users", getAllUsers);
 
     if (isLoading) {
         return (
